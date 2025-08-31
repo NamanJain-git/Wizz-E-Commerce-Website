@@ -1,0 +1,151 @@
+.login {
+    padding: 150px;
+    display: flex;
+    justify-content: center;
+    background-color: #ab94ef;
+}
+
+.login-container {
+    position: relative;
+    z-index: 1;
+    background: #f1a6a6;
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    color: #fff;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    background: white;
+    color: gray;
+    border: none;
+    border-radius: 4px;
+}
+
+.term-conditions {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    background: white;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+}
+
+.term-conditions label {
+    font-size: 15px;
+    width: 55%;
+}
+
+label b {
+    text-decoration: underline;
+}
+
+#terms-box {
+    width: 6%;
+    margin-top: 3px;
+    color: white;
+    cursor: pointer;
+}
+
+#submit-btn {
+    width: 200px;
+    background-color: white;
+    color: hsl(120, 97%, 53%);
+    border: 1px solid #444;
+    padding: 8px;
+    margin-top: 10px;
+    margin-left: 100px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+#submit-btn:hover {
+    background-color: rgb(20, 252, 20);
+    color: black;
+}
+
+.signup-link {
+    text-align: center;
+    font-size: 16px;
+    margin: 10px;
+}
+
+.signup-link a {
+    color: #333;
+    font-weight: bold;
+}
+
+.signup {
+    padding: 150px;
+    display: flex;
+    justify-content: center;
+    background-color: #ab94ef;
+}
+
+.signup-container {
+    position: relative;
+    z-index: 1;
+    background: #f1a6a6;
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    color: #fff;
+}
+
+.gender-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.gender-label {
+    margin: 10px;
+}
+
+.gender-data {
+    margin-left: 70px;
+}
+
+#male,
+#female {
+    width: 20%;
+    margin-left: 5px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    background: white;
+    color: gray;
+    border: none;
+    border-radius: 4px;
+}
+
+.login-link {
+    text-align: center;
+    font-size: 16px;
+    margin: 10px;
+}
+
+.login-link a {
+    color: #333;
+    font-weight: bold;
+}
+
+#success-msg {
+    color: #00964b;
+    text-align: center;
+    margin-top: 10px
+}

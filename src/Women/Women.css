@@ -1,0 +1,16 @@
+.women {
+    padding: 150px;
+}
+
+.women_products_box {
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 2px 0px 10px rgb(189, 183, 183);
+}
+
+.women_products {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}

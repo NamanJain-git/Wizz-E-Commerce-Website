@@ -1,0 +1,16 @@
+.beauty {
+    padding: 150px;
+}
+
+.beauty_products_box {
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 2px 0px 10px rgb(189, 183, 183);
+}
+
+.beauty_products {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}

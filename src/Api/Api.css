@@ -1,0 +1,23 @@
+.apibox {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    box-shadow: 2px 0px 10px rgb(189, 183, 183);
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.apiproducts {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.apiproducts img{
+    width: 150px;
+    height: 150px;
+}
