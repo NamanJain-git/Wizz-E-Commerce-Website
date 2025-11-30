@@ -18,9 +18,11 @@
 .beauty_products {
     display: flex;
     gap: 100px;
+    margin-bottom: 10px;
     justify-content: center;
 }
 
 .beauty_products img{
     width: 300px;
+    height: 300px;
 }
