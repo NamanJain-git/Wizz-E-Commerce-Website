@@ -9,8 +9,18 @@
     box-shadow: 2px 0px 10px rgb(189, 183, 183);
 }
 
+.beauty_products_upper {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
+
 .beauty_products {
     display: flex;
     gap: 100px;
     justify-content: center;
+}
+
+.beauty_products img{
+    width: 300px;
 }
