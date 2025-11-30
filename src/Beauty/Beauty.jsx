@@ -15,7 +15,7 @@ import hairclaws from "../assets/Productimgs/hairclaws.jpeg"
 import facewash from "../assets/Productimgs/facewash.jpeg"
 import shampoo from "../assets/Productimgs/shampoo.jpeg"
 import moisturizer from "../assets/Productimgs/moisturizer.jpeg"
-import Api2 from "../Api/Api2"
+import Api2 from "../Api/Api2.jsx"
 import "./Beauty.css"
 const Beauty = () => {
     return (
@@ -48,7 +48,7 @@ const Beauty = () => {
                         <Api2/>
 
                         
-              <div className="beauty_products mt-20">
+              <div className="beauty_products_upper mt-20">
                             <img src={kidsimg2} alt="" width="450" />
                             <img src={kidsimg2} alt="" width="450" />
                             <img src={kidsimg2} alt="" width="450" />

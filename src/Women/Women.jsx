@@ -58,7 +58,6 @@ const Women = () => {
                 
             </div> */}
 
-            <Api />
 
         </section>
     )

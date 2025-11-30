@@ -32,8 +32,9 @@ const Cart1 = () => {
 
 
     return (
-        <section className="py-[150px] min-h-screen bg-gray-100">
-            <div className="flex max-w-full mb-[40px] bg-gray-50 ">
+        <section >
+            <div className="min-h-screen w-full bg-gray-100 pt-[150px]">
+            <div className="min-h-screen flex max-w-full mb-[40px] bg-gray-50 ">
                 <div className="flex cart-left w-[60%] flex-col justify-center items-center p-[15px] gap-[20px]">
 
                     <div className="flex gap-[80px] items-center bg-white border">
@@ -88,15 +89,10 @@ const Cart1 = () => {
                         </div>
                     </div>
 
-                    <div className="cart-btn">
-                        <Link to={"/cartpage"}>
-                            <button onClick={() => dispatch(addToCart(cartItem))}
-                                className="bg-green-600 w-[300px] border text-white p-2 hover:bg-green-700 ">Buy Now</button>
-                        </Link>
-                    </div>
+                   
                 </div>
 
-                <div className="w-[40%] bg-white">
+                <div className="cart-right w-[40%] bg-white">
 
                     <div className="m-[50px] font-bold">
                         <h3>Price Details</h3>
@@ -120,9 +116,24 @@ const Cart1 = () => {
                         </div>
                     </div>
 
+                     <div className="cart-btn flex flex-col items-center gap-4 mt-6">
+                        <Link to={"/cartpage"}>
+                            <button onClick={() => dispatch(addToCart(cartItem))}
+                                className="bg-green-600 w-[300px] border text-white p-2 hover:bg-green-700 ">Buy Now</button>
+                        </Link>
+                   
+                        <Link to={"/cartpage"}>
+                            <button onClick={() => dispatch(addToCart(cartItem))}
+                                className="bg-green-600 w-[300px] border text-white p-2 hover:bg-green-700 ">Add to cart</button>
+                        </Link>
+                    </div>
+
                 </div>
             </div >
+            </div>
+
             <Carouselfunc />
+
         </section >
     )
 }
