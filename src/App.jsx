@@ -46,10 +46,6 @@ const App = () => {
         <Route path="/cartpage" element={<Cartpage />} />
         <Route path="/cartforapi" element={<CartforApi />} />
         <Route path="/cartforapi/:id" element={<CartforApi />} />
-        {/* <Route path="/categorycard" element={<Categorycard />} /> */}
-        {/* <Route path="/beauty" element={<Categorylist />} /> */}
-        {/* <Route path="/beauty" element={<Categorypage />} /> */}
-
 
       </Routes>
       <Footer />
