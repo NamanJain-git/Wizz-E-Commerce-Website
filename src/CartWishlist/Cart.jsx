@@ -33,7 +33,7 @@ const Cart1 = () => {
 
     return (
         <section >
-            <div className="min-h-screen w-full bg-gray-100 pt-[150px]">
+            <div className="min-h-screen w-full bg-gray-100">
             <div className="min-h-screen flex max-w-full mb-[40px] bg-gray-50 ">
                 <div className="flex cart-left w-[60%] flex-col justify-center items-center p-[15px] gap-[20px]">
 
@@ -92,7 +92,7 @@ const Cart1 = () => {
                    
                 </div>
 
-                <div className="cart-right w-[40%] bg-white">
+                <div className="cart-right w-[40%] bg-white pt-[150px]">
 
                     <div className="m-[50px] font-bold">
                         <h3>Price Details</h3>
@@ -103,9 +103,9 @@ const Cart1 = () => {
                         <p>Total Price: <span className="text-green-500"> ₹{cartItem.price * count - disc + extraFee}/-</span></p>
                     </div>
 
-                    <div className="flex-column m-[10px]">
+                    <div className="flex-column m-[10px] pt-[20px]">
                         <h4>More Options</h4>
-                        <div className="flex m-[15px]">
+                        <div className="flex m-[15px] pt-[20px]">
                             <img className="w-[100px] m-[2px]" src={optionimg} alt="" />
                             <img className="w-[100px] m-[2px]" src={optionimg} alt="" />
                             <img className="w-[100px] m-[2px]" src={optionimg} alt="" />
@@ -116,15 +116,16 @@ const Cart1 = () => {
                         </div>
                     </div>
 
-                     <div className="cart-btn flex flex-col items-center gap-4 mt-6">
+                     <div className="cart-btn flex flex-row justify-center gap-4 mt-30">
                         <Link to={"/cartpage"}>
                             <button onClick={() => dispatch(addToCart(cartItem))}
-                                className="bg-green-600 w-[300px] border text-white p-2 hover:bg-green-700 ">Buy Now</button>
+
+                                className="bg-[#6c63ff] w-[250px]  text-white p-2 hover:bg-[#5a31f4] rounded transition-colors ml-[50px]">Buy Now</button>
                         </Link>
                    
                         <Link to={"/cartpage"}>
                             <button onClick={() => dispatch(addToCart(cartItem))}
-                                className="bg-green-600 w-[300px] border text-white p-2 hover:bg-green-700 ">Add to cart</button>
+                                className="bg-[#6c63ff] w-[250px]  text-white p-2 hover:bg-[#5a31f4] rounded transition-colors ml-[50px] ">Add to cart</button>
                         </Link>
                     </div>
 

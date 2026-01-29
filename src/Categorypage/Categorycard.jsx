@@ -32,7 +32,7 @@ const CategoryCard = ({ product }) => {
           <p>{product.discount} off</p>
 
           <div className="btns">
-              <button className="buy-btn">Add to Cart</button>
+            <button className="buy-btn">Add to Cart</button>
             <button className="buy-btn">Buy Now</button>
           </div>
 

@@ -19,7 +19,7 @@ import Api from "./Api/Api1";
 import Protect from "./Protect";
 import Cartpage from "./CartWishlist/Cartpage";
 import CartforApi from "./CartWishlist/CartforApi";
-import CategoryCard from "./CategoryPage/Categorycard";
+// import CategoryCard from "./CategoryPage/Categorycard";
 import Categorylist from "./Categorypage/Categorylist";
 
 
