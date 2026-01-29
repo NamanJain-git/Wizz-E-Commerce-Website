@@ -65,11 +65,11 @@ import { useSearch } from "../Usecontext/Usecontext"
 
 
 export const electronics = [
-    { id: 101, title: "Dell LCD", name: "LCD", price: 20000, discount: "upto 5%", image: electronics_img },
-    { id: 102, title: "Boat Headphone", name: "Headphones", price: 999, discount: "upto 3%",image: headphone_img },
-    { id: 103, title: "Poco Mobile", name: "Mobiles", price: 15000, discount: "upto 10%", image: mobile_img },
-    { id: 104, title: "Noise Smart Watch", name: "Watches", price: 1499, discount: "upto 8%", image: smartwatch_img },
-    { id: 105, title: "Boat Speaker", name: "Speakers", price: 2999, discount: "upto 8%", image: speaker_img },
+    { id: 101, title: "Dell LCD", category: "lcd", name: "LCD", price: 20000, discount: "upto 5%", image: electronics_img },
+    { id: 102, title: "Boat Headphone", category: "headphones", name: "Headphones", price: 999, discount: "upto 3%", image: headphone_img },
+    { id: 103, title: "Poco Mobile", category: "phones", name: "Mobiles", price: 15000, discount: "upto 10%", image: mobile_img },
+    { id: 104, title: "Noise Smart Watch", category: "smwatch", name: "Watches", price: 1499, discount: "upto 8%", image: smartwatch_img },
+    { id: 105, title: "Boat Speaker", category: "speaker", name: "Speakers", price: 2999, discount: "upto 8%", image: speaker_img },
 
 ]
 
@@ -84,9 +84,9 @@ export const grocery = [
 export const sports = [
     { id: 301, title: "Gym Equipments", name: "Gym Products", price: 2999, discount: "upto 20%", image: gym_img },
     { id: 302, title: "Gared Cycle", name: "Geared Cycles", price: 3999, discount: "upto 15%", image: garedcycle_img },
-    { id: 303, title: "Dry Fruits", name: "Dry Fruits & Nuts", discount: "Min. 10%", image: dryfruit_img },
-    { id: 304, title: "Dumbels", name: "Dumbels", discount: "Min. 4%", image: dumbel_img },
-    { id: 305, title: "Bags", name: "Bags", discount: "Min. 10%", image:  bag_img },
+    { id: 303, title: "Dry Fruits", name: "Dry Fruits & Nuts", price: 2000, discount: "Min. 10%", image: dryfruit_img },
+    { id: 304, title: "Dumbels", name: "Dumbels", price: 999, discount: "Min. 4%", image: dumbel_img },
+    { id: 305, title: "Bags", name: "Bags", price: 599, discount: "Min. 10%", image: bag_img },
 ]
 
 export const toys = [
@@ -98,38 +98,38 @@ export const toys = [
 ]
 
 export const homedecor = [
-    { id: 501, title: "Wall Clocck", name: "Wall Clocks", discount: "Upto 10%", image: wallclock_img },
-    { id: 502, title: "Decorative murti", name: "decoration murti", discount: "Min. 20%", image: decofigures_img },
-    { id: 503, title: "LED Bulb", name: "Bulbs", discount: "Min. 10%", image: bulb_img },
-    { id: 504, title: "House Mats", name: "Mats", discount: "Min. 30%", image: mats_img }
+    { id: 501, title: "Wall Clocck", name: "Wall Clocks", discount: "Upto 10% off", image: wallclock_img },
+    { id: 502, title: "Decorative murti", name: "decoration murti", discount: "Min. 20% off", image: decofigures_img },
+    { id: 503, title: "LED Bulb", name: "Bulbs", discount: "Min. 10% off", image: bulb_img },
+    { id: 504, title: "House Mats", name: "Mats", discount: "Min. 30% off", image: mats_img }
 ]
 
 export const furniture = [
-    { id: 601, title: "Home Temple ", name: "Home Temple", price: 8999, discount: "Min. 10%", image: hometemple_img },
-    { id: 602, title: "Drawers", name: "Drawers", price: 6999, discount: "Min. 10%", image: drawer_img },
-    { id: 603, title: "Wardrobe", name: "Wardrobs", price: 3999, discount: "Min. 10%", image: wardrobe_img },
-    { id: 604, title: "Chairs", name: "Chairs", price: 599, discount: "Min. 10%", image: chair_img }
+    { id: 601, title: "Home Temple ", name: "Home Temple", price: 8999, discount: "Min. 10% off", image: hometemple_img },
+    { id: 602, title: "Drawers", name: "Drawers", price: 6999, discount: "Min. 10% off", image: drawer_img },
+    { id: 603, title: "Wardrobe", name: "Wardrobs", price: 3999, discount: "Min. 10% off", image: wardrobe_img },
+    { id: 604, title: "Chairs", name: "Chairs", price: 599, discount: "Min. 10% off", image: chair_img }
 ]
 
 export const haircare = [
-    { id: 701, title: "Mama Earth Facewash", name: "Facewash", discount: "Min. 10%", image: facewash_img },
-    { id: 702, title: "Flower Hair Claws", name: "Hair claws", discount:  "Min. 10%", image: hairclaws_img },
-    { id: 703, title: "Flix Shampoo", name: "Shampoos", discount:  "Min. 10%", image: shampoo_img },
-    { id: 704, title: "Moisturizer", name: "Moisturizer", discount:  "Min. 10%", image: moisturizer_img }
+    { id: 701, title: "Mama Earth Facewash", name: "Facewash", discount: "Min. 5% off", image: facewash_img },
+    { id: 702, title: "Flower Hair Claws", name: "Hair claws", discount: "Min. 5% off", image: hairclaws_img },
+    { id: 703, title: "Flix Shampoo", name: "Shampoos", discount: "Min. 5% off", image: shampoo_img },
+    { id: 704, title: "Moisturizer", name: "Moisturizer", discount: "Min. 5% off", image: moisturizer_img }
 ]
 
 export const festival = [
-    { id: 801, title: "Dell LCD", name: "T-shirts", discount: "Min. 30%", image: womenimg1 },
-    { id: 802, title: "Dell LCD", name: "Wrist watches", discount: "Min. 20%", image: menimg1 },
-    { id: 803, title: "Dell LCD", name: "Women Sarees", discount: "Min. 20%", image: kidsimg1 },
-    { id: 804, title: "Dell LCD", name: "Women Gowns", discount:  "Min. 10%", image: womenproduct5 }
+    { id: 801, title: "Dell LCD", name: "T-shirts", discount: "Min. 30% off", image: womenimg1 },
+    { id: 802, title: "Dell LCD", name: "Wrist watches", discount: "Min. 20% off", image: menimg1 },
+    { id: 803, title: "Dell LCD", name: "Women Sarees", discount: "Min. 20% off", image: kidsimg1 },
+    { id: 804, title: "Dell LCD", name: "Women Gowns", discount: "Min. 10% off", image: womenproduct5 }
 ]
 
 export const season = [
-    { id: 901, title: "Dell LCD", name: "Dry Fruits & Nuts", discount: "Min. 10%", image: womenproduct3 },
-    { id: 902, title: "Dell LCD", name: "Cycles", discount: "Min. 20%", image: womenproduct4 },
-    { id: 903, title: "Dell LCD", name: "Bike Helmets", discount: "Min. 10%", image: womenimg1 },
-    { id: 904, title: "Dell LCD", name: "Musical Keyboards", discount: "Upto 20%", image: womenproduct5 }
+    { id: 901, title: "Dell LCD", name: "Dry Fruits & Nuts", discount: "Min. 10% off", image: womenproduct3 },
+    { id: 902, title: "Dell LCD", name: "Cycles", discount: "Min. 20% off", image: womenproduct4 },
+    { id: 903, title: "Dell LCD", name: "Bike Helmets", discount: "Min. 10% off", image: womenimg1 },
+    { id: 904, title: "Dell LCD", name: "Musical Keyboards", discount: "Upto 20% off", image: womenproduct5 }
 ]
 
 
@@ -156,7 +156,7 @@ const Home = () => {
         <section className="home">
             <div className="head">
                 <div className="head_cont">
-                    <Link to="category"><img src={head2_img} alt="" /></Link>
+                    <img src={head2_img} alt="" />
                     <p>Mobile</p>
                 </div>
                 <div className="head_cont">
@@ -203,11 +203,11 @@ const Home = () => {
                 <div className="products">
                     {filterproducts1.map((product) => (
                         <div key={product.id}>
-                            <Link to={`/description2/${product.id}`}>
-                                <img src={product.image} alt="" />
+                            <Link to={`/electronics/${product.category}`}>
+                                <img src={product.image} alt={product.title} />
                             </Link>
                             <p>{product.name}</p>
-                            <p>₹{product.price}</p>
+                            <p>From ₹{product.price}</p>
                         </div>
 
                     ))}
@@ -225,7 +225,7 @@ const Home = () => {
                                 <img src={product.image} alt="" />
                             </Link>
                             <p>{product.name}</p>
-                            <p>₹{product.price}</p>
+                            <p>From ₹{product.price}</p>
                         </div>
 
                     ))}
@@ -236,14 +236,14 @@ const Home = () => {
                 <div className="title">
                     <h1>Sports, Healthcare and More</h1>
                 </div>
-              <div className="products">
-                   {filterproducts3.map((product) => (
+                <div className="products">
+                    {filterproducts3.map((product) => (
                         <div key={product.id}>
                             <Link to={`/description2/${product.id}`}>
                                 <img src={product.image} alt="" />
                             </Link>
                             <p>{product.name}</p>
-                            <p>₹{product.price}</p>
+                            <p>From ₹{product.price}</p>
                         </div>
 
                     ))}

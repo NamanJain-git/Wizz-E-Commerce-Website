@@ -12,14 +12,15 @@ import Desc2 from "./Description/Description2";
 import Login from "./LoginSignup/Login";
 import Signup from "./LoginSignup/Signup";
 import Cart1 from "./CartWishlist/Cart";
-import ProductList from "./ProductCards/ProductList";
-import ProductCard from "./ProductCards/ProductCard";
+// import ProductList from "./ProductCards/ProductList";
+// import ProductCard from "./ProductCards/ProductCard";
 import Api from "./Api/Api1";
-import Categorylist from "./Categorypage/Categorylist";
+
 import Protect from "./Protect";
 import Cartpage from "./CartWishlist/Cartpage";
 import CartforApi from "./CartWishlist/CartforApi";
-// import CategoryCard from "./CategoryPage/Categorycard";
+import CategoryCard from "./CategoryPage/Categorycard";
+import Categorylist from "./Categorypage/Categorylist";
 
 
 const App = () => {
@@ -37,7 +38,7 @@ const App = () => {
         <Route path="/women" element={<Women />} />
         <Route path="/kids" element={<Kids />} />
         <Route path="/beauty" element={<Beauty />} />
-        <Route path="/category" element={<ProductList />} />
+        {/* <Route path="/category" element={<ProductList />} /> */}
         <Route path="/description" element={<Desc />} />
         <Route path="/description/:id" element={<Desc />} />
         <Route path="/login" element={<Login />} />
@@ -46,7 +47,8 @@ const App = () => {
         <Route path="/cartpage" element={<Cartpage />} />
         <Route path="/cartforapi" element={<CartforApi />} />
         <Route path="/cartforapi/:id" element={<CartforApi />} />
-
+        <Route path="/Categorylist" element={<Categorylist/>} />
+        <Route path="/electronics/:category" element={<Categorylist />} />
       </Routes>
       <Footer />
     </BrowserRouter>

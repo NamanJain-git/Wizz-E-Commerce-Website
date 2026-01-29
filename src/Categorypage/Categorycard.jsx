@@ -2,6 +2,9 @@ import React from "react";
 import "./Category.css"
 
 const CategoryCard = ({ product }) => {
+
+
+
   return (
     <div className="card-section ">
       <div className="card-div">
@@ -27,9 +30,15 @@ const CategoryCard = ({ product }) => {
           <h3>₹{product.price}/-</h3>
           <p><span>4.5⭐ </span>38,835 ratings & 1930 Reviews</p>
           <p>{product.discount} off</p>
+
+          <div className="btns">
+              <button className="buy-btn">Add to Cart</button>
+            <button className="buy-btn">Buy Now</button>
+          </div>
+
         </div>
 
-        {/* <button className="buy-btn">Add to Cart</button> */}
+
       </div>
     </div>
   );

@@ -18,7 +18,7 @@ const ProductList = () => {
       </div>
 
       <div className="product-div">
-        <h2>Top Picks for You</h2>
+        <h2>Top PicksYou</h2>
         <div className="product-grid">
           {grocery.map((item) => (
             <ProductCard key={item.id} product={item} />
