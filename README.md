@@ -1,1 +1,1 @@
-PAGES LINK (wizz-ecommerce-naman.netlify.app)
+YOU CAN CHECK THE WEBSITE HERE -- wizz-ecommerce-naman.netlify.app
