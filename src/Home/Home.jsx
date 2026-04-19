@@ -48,7 +48,7 @@ import menimg1 from "../assets/Productimgs/menimg1.webp"
 import kidsimg2 from "../assets/Productimgs/kidsimg2.jpg"
 import kidsimg1 from "../assets/Productimgs/kidsimg1.webp"
 import beautyimg2 from "../assets/Productimgs/beautyimg2.jpg"
-import womenimg1 from "../assets/Productimgs/womenproduct1.webp"
+import womenproduct1 from "../assets/Productimgs/womenproduct1.webp"
 import womenproduct3 from "../assets/Productimgs/womenproduct3.webp"
 import womenproduct4 from "../assets/Productimgs/womenproduct4.webp"
 import womenproduct5 from "../assets/Productimgs/womenproduct5.webp"
@@ -119,7 +119,7 @@ export const haircare = [
 ]
 
 export const festival = [
-    { id: 801, title: "Dell LCD", name: "T-shirts", discount: "Min. 30% off", image: womenimg1 },
+    { id: 801, title: "Dell LCD", name: "T-shirts", discount: "Min. 30% off", image: womenproduct1 },
     { id: 802, title: "Dell LCD", name: "Wrist watches", discount: "Min. 20% off", image: menimg1 },
     { id: 803, title: "Dell LCD", name: "Women Sarees", discount: "Min. 20% off", image: kidsimg1 },
     { id: 804, title: "Dell LCD", name: "Women Gowns", discount: "Min. 10% off", image: womenproduct5 }
@@ -128,7 +128,7 @@ export const festival = [
 export const season = [
     { id: 901, title: "Dell LCD", name: "Dry Fruits & Nuts", discount: "Min. 10% off", image: womenproduct3 },
     { id: 902, title: "Dell LCD", name: "Cycles", discount: "Min. 20% off", image: womenproduct4 },
-    { id: 903, title: "Dell LCD", name: "Bike Helmets", discount: "Min. 10% off", image: womenimg1 },
+    { id: 903, title: "Dell LCD", name: "Bike Helmets", discount: "Min. 10% off", image: womenproduct1 },
     { id: 904, title: "Dell LCD", name: "Musical Keyboards", discount: "Upto 20% off", image: womenproduct5 }
 ]
 
