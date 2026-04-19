@@ -1,1 +1,1 @@
-PAGES LINK (https://namanjain-git.github.io/Wizz-E-Commerce-Website/)
+PAGES LINK (wizz-ecommerce-naman.netlify.app)
