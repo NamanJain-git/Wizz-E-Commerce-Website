@@ -13,6 +13,4 @@ export const SearchProvider = ({ children }) => {
         </SearchContext.Provider>
     );
 };
-
-// 3. Create custom hook
 export const useSearch = () => useContext(SearchContext);

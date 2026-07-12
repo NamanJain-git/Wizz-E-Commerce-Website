@@ -64,7 +64,6 @@ const Login = () => {
                 e.target.reset();
                 localStorage.setItem("isLoggedIn", "true");
                 localStorage.setItem("currentUser", JSON.stringify(foundUser));
-                // alert("successfuly")
                 navigate("/")
                 window.location.reload()
 

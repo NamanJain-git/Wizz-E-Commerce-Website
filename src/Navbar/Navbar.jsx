@@ -5,8 +5,6 @@ import { useSearch } from "../Usecontext/Usecontext";
 import Dropdown from 'react-bootstrap/Dropdown';
 import ProfileDropdown from "./Dropdown";
 import { useSelector } from "react-redux";
-// import { useState, useEffect } from "react";
-
 import { CgProfile } from "react-icons/cg";
 import { FaHeart } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
@@ -48,12 +46,6 @@ const Nav = () => {
                 <div className="icon-options">
                     <ProfileDropdown />
 
-                    {/* <div className="icons-data">
-                        <div className="icons">
-                            <FaHeart />
-                        </div>
-                        <p>whishlist</p>
-                    </div> */}
                     <div className="icons-data items-center gap-2">
                         <Link to="/cartpage">
                             <div className="icons relative inline-block">

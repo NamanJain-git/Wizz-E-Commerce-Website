@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Carouselfunc from "../Carousel/Carouselpage";
 import optionimg from "../assets/Headimgs/head2.png";
-
 import { useDispatch } from "react-redux";
 import { addToCart } from "../Slice/Slicecart";
 

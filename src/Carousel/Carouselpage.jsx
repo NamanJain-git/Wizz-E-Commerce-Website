@@ -7,7 +7,7 @@ import banner3 from "../assets/Bannerimg/banner3.jpeg";
 function Carouselfunc() {
     return (
         <div>
-            <Carousel>
+            <Carousel className="mt-4">
                 <Carousel.Item>
                     <img
                         className="d-block w-100"

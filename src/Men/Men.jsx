@@ -1,12 +1,14 @@
 import menbanner from "../assets/Bannerimg/menbanner.webp"
-import mensimg1 from "../assets/Productimgs/menimg1.webp"
-import mensimg2 from "../assets/Productimgs/menimg2.png"
-import womensimg2 from "../assets/Productimgs/womenimg2.jpg"
-import kidsimg2 from "../assets/Productimgs/kidsimg2.jpg"
-// import Api from "/Api1"
-// import Api2 from "../Api2"
+import menproduct1 from "../assets/Productimgs/menproduct1.webp"
+import menproduct2 from "../assets/Productimgs/menproduct2.webp"
+import menproduct3 from "../assets/Productimgs/menproduct3.webp"
+import menproduct4 from "../assets/Productimgs/menproduct4.jpeg"
+import menproduct5 from "../assets/Productimgs/menproduct5.jpeg"
+import menproduct6 from "../assets/Productimgs/menproduct6.jpeg"
+import menproduct7 from "../assets/Productimgs/menproduct7.png"
+import menproduct8 from "../assets/Productimgs/menproduct8.jpeg"
+
 import Api from "../Api/Api1"
-import Api2 from "../Api/Api2"
 import "./Men.css"
 import { Link } from "react-router-dom";
 
@@ -17,34 +19,25 @@ const Men = () => {
 
             <div className="men_products_box mt-10 mb-10">
                 <div className="men_products">
-                    <img src={mensimg1} alt="" />
-                    <img src={mensimg1} alt="" />
-                    <img src={mensimg1} alt="" />
-                    <img src={mensimg1} alt="" />
+                    <img src={menproduct1} alt="" />
+                    <img src={menproduct2} alt="" />
+                    <img src={menproduct3} alt="" />
+                    <img src={menproduct4} alt="" />
                 </div>
             </div>
 
             <Api />
 
-            <div className="men_products mt-10">
-                <Link to="/description">
-                    <img src={mensimg2} alt="Men's Product" width="450" />
-                </Link>
-                {/* <img src={mensimg2} alt="" width="450" /> */}
-                <img src={kidsimg2} alt="" width="450" />
-                <img src={womensimg2} alt="" width="450" />
-            </div>
+           
 
             <div className="men_products_box mt-10 mb-10">
                 <div className="men_products">
-                    <img src={mensimg1} alt="" />
-                    <img src={mensimg1} alt="" />
-                    <img src={mensimg1} alt="" />
-                    <img src={mensimg1} alt="" />
+                    <img src={menproduct5} alt="" />
+                    <img src={menproduct6} alt="" />
+                    <img src={menproduct7} alt="" />
+                    <img src={menproduct8} alt="" />
                 </div>
             </div>
-
-            <Api2 />
 
         </section>
     )

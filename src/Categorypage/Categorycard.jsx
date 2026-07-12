@@ -3,8 +3,6 @@ import "./Category.css"
 
 const CategoryCard = ({ product }) => {
 
-
-
   return (
     <div className="card-section ">
       <div className="card-div">
@@ -37,7 +35,6 @@ const CategoryCard = ({ product }) => {
           </div>
 
         </div>
-
 
       </div>
     </div>

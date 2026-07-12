@@ -18,11 +18,12 @@
 .beauty_products {
     display: flex;
     gap: 100px;
-    margin-bottom: 10px;
     justify-content: center;
 }
 
-.beauty_products img{
-    width: 300px;
-    height: 300px;
+.beauty_products img {
+    width: 320px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 8px;
 }

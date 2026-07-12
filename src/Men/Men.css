@@ -14,3 +14,9 @@
     gap: 100px;
     justify-content: center;
 }
+.men_products img {
+   width: 320px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 8px;
+}
