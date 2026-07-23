@@ -76,6 +76,61 @@ import bag3 from "../assets/Categoryimg/bag3.jpeg";
 import bag4 from "../assets/Categoryimg/bag4.jpeg";
 import bag5 from "../assets/Categoryimg/bag5.jpeg";
 
+import skincare1 from "../assets/Productimgs/facewash.jpeg";
+import skincare2 from "../assets/Productimgs/hairclaws.jpeg";
+import skincare3 from "../assets/Productimgs/shampoo.jpeg";
+import skincare4 from "../assets/Productimgs/moisturizer.jpeg";
+
+import home1 from "../assets/Productimgs/hometemple.jpeg";
+import home2 from "../assets/Productimgs/drawer.jpeg";
+import home3 from "../assets/Productimgs/wardrobe.jpeg";
+import home4 from "../assets/Productimgs/chair.jpeg";
+
+import festival1 from "../assets/Productimgs/womenproduct5.jpeg";
+import festival2 from "../assets/Productimgs/menproduct9.jpeg";
+import festival3 from "../assets/Productimgs/kidsproduct1.jpeg";
+import festival4 from "../assets/Productimgs/womenproduct6.jpeg";
+
+import menproduct1 from "../assets/Productimgs/menproduct1.webp"
+import menproduct2 from "../assets/Productimgs/menproduct2.webp"
+import menproduct3 from "../assets/Productimgs/menproduct3.webp"
+import menproduct4 from "../assets/Productimgs/menproduct4.jpeg"
+import menproduct5 from "../assets/Productimgs/menproduct5.jpeg"
+import menproduct6 from "../assets/Productimgs/menproduct6.jpeg"
+import menproduct7 from "../assets/Productimgs/menproduct7.png"
+import menproduct8 from "../assets/Productimgs/menproduct8.jpeg"
+
+import womenproduct1 from "../assets/Productimgs/womenproduct1.jpeg"
+import womenproduct2 from "../assets/Productimgs/womenproduct2.png"
+import womenproduct3 from "../assets/Productimgs/womenproduct3.jpeg"
+import womenproduct4 from "../assets/Productimgs/womenproduct4.png"
+import womenproduct7 from "../assets/Productimgs/womenproduct7.jpeg"
+import womenproduct8 from "../assets/Productimgs/womenproduct8.jpeg"
+import womenproduct9 from "../assets/Productimgs/womenproduct9.jpeg"
+import womenproduct10 from "../assets/Productimgs/womenproduct10.jpeg"
+
+import kidsproduct1 from "../assets/Productimgs/kidsproduct1.jpeg"
+import kidsproduct2 from "../assets/Productimgs/kidsproduct2.jpeg"
+import kidsproduct3 from "../assets/Productimgs/kidsproduct3.jpeg"
+import kidsproduct4 from "../assets/Productimgs/kidsproduct4.png"
+import kidsproduct5 from "../assets/Productimgs/kidsproduct5.webp"
+import kidsproduct6 from "../assets/Productimgs/kidsproduct6.jpeg"
+import kidsproduct7 from "../assets/Productimgs/kidsproduct7.jpeg"
+import kidsproduct8 from "../assets/Productimgs/kidsproduct8.jpeg"
+import kidsproduct9 from "../assets/Productimgs/kidsproduct9.jpeg"
+import kidsproduct10 from "../assets/Productimgs/kidsproduct10.jpeg"
+import kidsproduct11 from "../assets/Productimgs/kidsproduct11.jpeg"
+import kidsproduct12 from "../assets/Productimgs/kidsproduct12.jpeg"
+
+import beautyproduct1 from "../assets/Productimgs/beautyproduct1.jpeg"
+import beautyproduct2 from "../assets/Productimgs/beautyproduct2.jpeg"
+import beautyproduct3 from "../assets/Productimgs/beautyproduct3.jpeg"
+import beautyproduct4 from "../assets/Productimgs/beautyproduct4.jpeg"
+import beautyproduct5 from "../assets/Productimgs/beautyproduct5.jpeg"
+// import womenproduct7 from "../assets/Productimgs/womenproduct7.jpeg"
+// import womenproduct8 from "../assets/Productimgs/womenproduct8.jpeg"
+// import womenproduct9 from "../assets/Productimgs/womenproduct9.jpeg"
+
 // ================= Electronics =================
 
 export const electronics_products = [
@@ -178,10 +233,105 @@ export const sports_products = [
   { id: 75, name: "Sports bag", category: "bags", price: 500, discount: "upto 4%", image: bag5 },
 ];
 
+// ================= Skincare =================
+
+export const skincare_products = [
+  { id: 76, name: "Mamaearth Face wash", category: "skincare", price: 200, discount: "upto 5%", image: skincare1 },
+  { id: 77, name: "Hair claws", category: "skincare", price: 150, discount: "upto 3%", image: skincare2 },
+  { id: 78, name: "Plix Shampoo", category: "skincare", price: 200, discount: "upto 8%", image: skincare3 },
+  { id: 79, name: "Dot&Key Moisturizer", category: "skincare", price: 230, discount: "upto 4%", image: skincare4 },
+];
+
+// ================= Home =================
+
+export const home_products = [
+  { id: 80, name: "Home temple", category: "home", price: 21999, discount: "upto 3%", image: home1 },
+  { id: 81, name: "Drawer", category: "home", price: 11000, discount: "upto 5%", image: home2 },
+  { id: 82, name: "Wardrobe", category: "home", price: 19990, discount: "upto 4%", image: home3 },
+  { id: 83, name: "Chair", category: "home", price: 2000, discount: "upto 5%", image: home4 },
+];
+
+// ================= Festival =================
+
+export const festival_products = [
+
+  { id: 84, name: "Sarree", category: "festival", price: 2000, discount: "upto 5%", image: festival1 },
+  { id: 85, name: "Ethnic kurta set", category: "festival", price: 1900, discount: "upto 5%", image: festival2 },
+  { id: 86, name: "Kids kurta set", category: "festival", price: 999, discount: "upto 4%", image: festival3 },
+  { id: 87, name: "Stylish gown", category: "festival", price: 2999, discount: "upto 4%", image: festival4 },
+];
+
+// ================= Men =================
+
+export const mens_products = [
+  { id: 88, name: "Black Dragon T-shirt", category: "menproduct", price: 900, discount: "upto 5%", image: menproduct1 },
+  { id: 89, name: "Sando", category: "menproduct", price: 399, discount: "upto 3%", image: menproduct2 },
+  { id: 90, name: "Formal Shirt combo", category: "menproduct", price: 2000, discount: "upto 8%", image: menproduct3 },
+  { id: 91, name: "Men Shirt", category: "menproduct", price: 1200, discount: "upto 4%", image: menproduct4 },
+  { id: 92, name: "Baggy pants", category: "menproduct", price: 1199, discount: "upto 3%", image: menproduct5 },
+  { id: 93, name: "Baggy joggers", category: "menproduct", price: 2500, discount: "upto 5%", image: menproduct6 },
+  { id: 94, name: "Hotstyle sport shoes", category: "menproduct", price: 1190, discount: "upto 4%", image: menproduct7 },
+  { id: 95, name: "Formal brown shoes", category: "menproduct", price: 3000, discount: "upto 5%", image: menproduct8 },
+];
+
+// ================= Women =================
+
+export const womens_products = [
+  { id: 96, name: "White Summer Top", category: "womenproduct", price: 700, discount: "upto 5%", image: womenproduct1 },
+  { id: 97, name: "Kurti suit", category: "womenproduct", price: 1900, discount: "upto 3%", image: womenproduct2 },
+  { id: 98, name: "Silk Sarree", category: "womenproduct", price: 2000, discount: "upto 8%", image: womenproduct3 },
+  { id: 99, name: "Designer Dress", category: "womenproduct", price: 2300, discount: "upto 4%", image: womenproduct4 },
+  { id: 100, name: "Embroidered kurti", category: "womenproduct", price: 1199, discount: "upto 3%", image: womenproduct7 },
+  { id: 101, name: "Ladies sports shoes", category: "womenproduct", price: 1500, discount: "upto 5%", image: womenproduct8 },
+  { id: 102, name: "Designer pendant set", category: "womenproduct", price: 399, discount: "upto 4%", image: womenproduct9 },
+  { id: 103, name: "Wrist watch", category: "womenproduct", price: 299, discount: "upto 2%", image: womenproduct10 },
+];
+
+// ================= Kids =================
+
+export const kids_products = [
+  { id: 104, name: "Ethnic suit", category: "kidsproduct", price: 2500, discount: "upto 5%", image: kidsproduct1 },
+  { id: 105, name: "Girl summer dress", category: "kidsproduct", price: 1900, discount: "upto 3%", image: kidsproduct2 },
+  { id: 106, name: "Baby girls top", category: "kidsproduct", price: 1000, discount: "upto 8%", image: kidsproduct3 },
+  { id: 107, name: "Full sleeve shirt", category: "kidsproduct", price: 700, discount: "upto 4%", image: kidsproduct4 },
+  { id: 108, name: "Elephant dress", category: "kidsproduct", price: 2199, discount: "upto 3%", image: kidsproduct5 },
+  { id: 109, name: "Farm dress", category: "kidsproduct", price: 3000, discount: "upto 5%", image: kidsproduct6 },
+  { id: 110, name: "Kurta Payjama set", category: "kidsproduct", price: 3000, discount: "upto 5%", image: kidsproduct7 },
+  { id: 111, name: "Asian sports shoes", category: "kidsproduct", price: 390, discount: "upto 4%", image: kidsproduct8 },
+  { id: 112, name: "Athlete Light shoes", category: "kidsproduct", price: 1400, discount: "upto 5%", image: kidsproduct9 },
+  { id: 113, name: "Toy car with wrist watch", category: "kidsproduct", price: 799, discount: "upto 3%", image: kidsproduct10 },
+  { id: 114, name: "Cars school bag", category: "kidsproduct", price: 2000, discount: "upto 5%", image: kidsproduct11 },
+  { id: 115, name: "Unicorn stationary kit", category: "kidsproduct", price: 399, discount: "upto 4%", image: kidsproduct12 },
+];
+
+// ================= Beauty =================
+
+export const beauty_products = [
+  { id: 116, name: "Face Makeup kit", category: "beautyproduct", price: 3000, discount: "upto 5%", image: beautyproduct5 },
+  { id: 117, name: "Hair claws", category: "beautyproduct", price: 199, discount: "upto 3%", image: skincare2 },
+  { id: 118, name: "Nail paint box", category: "beautyproduct", price: 1000, discount: "upto 8%", image: beautyproduct4 },
+  { id: 119, name: "Mamaearth Facewash", category: "beautyproduct", price: 200, discount: "upto 4%", image: skincare1 },
+  { id: 120, name: "Lakme Care creame", category: "beautyproduct", price: 299, discount: "upto 3%", image: beautyproduct2 },
+  { id: 121, name: "Dot&Key Moisturizer", category: "beautyproduct", price: 300, discount: "upto 5%", image: skincare4 },
+  { id: 122, name: "Face wipes", category: "beautyproduct", price: 199, discount: "upto 4%", image: beautyproduct1 },
+  { id: 123, name: "Eyemagic eyelashes", category: "beautyproduct", price: 3000, discount: "upto 5%", image: beautyproduct3 },
+  { id: 120, name: "Plix Shampoo", category: "beautyproduct", price: 199, discount: "upto 3%", image: skincare3 },
+  { id: 121, name: "Embroidered kurta", category: "beautyproduct", price: 1900, discount: "upto 5%", image: womenproduct7 },
+  { id: 122, name: "Girls Sports shoes", category: "beautyproduct", price: 499, discount: "upto 4%", image: womenproduct8 },
+  { id: 123, name: "Golden pendant set", category: "beautyproduct", price: 499, discount: "upto 5%", image: womenproduct9 },
+];
+
 // ================= Master Array =================
 
 export const allProducts = [
   ...electronics_products,
   ...toys_products,
   ...sports_products,
+  ...skincare_products,
+  ...home_products,
+  ...festival_products,
+  ...mens_products,
+  ...womens_products,
+  ...kids_products,
+  ...beauty_products,
 ];

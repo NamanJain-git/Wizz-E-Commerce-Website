@@ -1,13 +1,34 @@
 import React from "react";
 import "./Category.css"
+import { Link } from "react-router-dom";
+
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { addToCart } from "../Slice/Slicecart";
+import { setBuyNowProduct } from "../Slice/Slicecart";
 
 const CategoryCard = ({ product }) => {
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleBuyNow = () => {
+    dispatch(setBuyNowProduct(product));
+    navigate("/checkout");
+  };
+
+  const handleAddToCart = () => {
+    dispatch(addToCart(product));
+    alert("Product Added Successfully");
+  };
 
   return (
     <div className="card-section ">
       <div className="card-div">
         <div className="category-img">
-          <img src={product.image} alt={product.name} className="" />
+          <Link to={`/cart/${product.id}`}>
+            <img src={product.image} alt={product.name} className="" />
+          </Link>
         </div>
 
         <div className="card-detail">
@@ -29,10 +50,12 @@ const CategoryCard = ({ product }) => {
           <p><span>4.5⭐ </span>38,835 ratings & 1930 Reviews</p>
           <p>{product.discount} off</p>
 
+          {/* <div className="btns"> */}
           <div className="btns">
-            <button className="buy-btn">Add to Cart</button>
-            <button className="buy-btn">Buy Now</button>
+            <button onClick={handleAddToCart} className="buy-btn">Add to Cart</button>
+            <button onClick={handleBuyNow} className="buy-btn">Buy Now</button>
           </div>
+          {/* </div> */}
 
         </div>
 

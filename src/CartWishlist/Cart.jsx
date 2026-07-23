@@ -1,19 +1,36 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
-import { electronics, sports, toys } from "../Home/Home";
+import { allProducts } from "../Categorypage/CategoryArray";
 import Carouselfunc from "../Carousel/Carouselpage";
 import optionimg from "../assets/Headimgs/head2.png";
-import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
 import { addToCart } from "../Slice/Slicecart";
+import { clearCart } from "../Slice/Slicecart";
+import { setBuyNowProduct } from "../Slice/Slicecart";
 
-const Cart1 = () => {
+const Cart = () => {
 
     const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    const handleBuyNow = () => {
+        dispatch(setBuyNowProduct(product));
+        navigate("/checkout");
+    };
+
+    const handleAddToCart = () => {
+        dispatch(addToCart(cartItem));
+        alert("Product Added Successfully");
+    };
 
     const { id } = useParams();
-    const cartItem = electronics.find((item) => item.id === parseInt(id)) || toys.find((item) => item.id === parseInt(id)) || sports.find((item) => item.id === parseInt(id));
+    // const cartItem = electronics.find((item) => item.id === parseInt(id)) || toys.find((item) => item.id === parseInt(id)) || sports.find((item) => item.id === parseInt(id));
+
+    const cartItem = allProducts.find(
+        (item) => item.id === parseInt(id)
+    );
     const [count, setCount] = useState(1);
     const disc = 50;
     const extraFee = 200;
@@ -109,16 +126,18 @@ const Cart1 = () => {
                         </div>
 
                         <div className="cart-btn flex flex-row justify-center gap-4 mt-30">
-                            <Link to={"/cartpage"}>
-                                <button onClick={() => dispatch(addToCart(cartItem))}
+                            <button
+                                onClick={handleBuyNow}
+                                className="bg-[#6c63ff] w-[250px] text-white p-2 hover:bg-[#5a31f4] rounded transition-colors ml-[50px]">
+                                Buy Now
+                            </button>
 
-                                    className="bg-[#6c63ff] w-[250px]  text-white p-2 hover:bg-[#5a31f4] rounded transition-colors ml-[50px]">Buy Now</button>
-                            </Link>
 
-                            <Link to={"/cartpage"}>
-                                <button onClick={() => dispatch(addToCart(cartItem))}
-                                    className="bg-[#6c63ff] w-[250px]  text-white p-2 hover:bg-[#5a31f4] rounded transition-colors ml-[50px] ">Add to cart</button>
-                            </Link>
+                            <button
+                                onClick={handleAddToCart}
+                                className="bg-[#6c63ff] w-[250px]  text-white p-2 hover:bg-[#5a31f4] rounded transition-colors ml-[50px] ">Add to cart
+                            </button>
+
                         </div>
 
                     </div>
@@ -131,4 +150,4 @@ const Cart1 = () => {
     )
 }
 
-export default Cart1;
+export default Cart;

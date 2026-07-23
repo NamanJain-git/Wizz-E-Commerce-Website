@@ -1,13 +1,18 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+
 import Carouselfunc from "../Carousel/Carouselpage";
 import optionimg from "../assets/Headimgs/head2.png";
-import { useDispatch } from "react-redux";
 import { addToCart } from "../Slice/Slicecart";
+import { setBuyNowProduct } from "../Slice/Slicecart";
 
 const CartforApi = () => {
 
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const { id } = useParams();
     const [count, setCount] = useState(1);
@@ -22,9 +27,27 @@ const CartforApi = () => {
             .then((data) => setdata(data));
     }, [id]);
 
+    const handleAddToCart = () => {
+        dispatch(addToCart(itemdata));
+        alert("Product Added to Cart");
+    };
+
+    const handleBuyNow = () => {
+        dispatch(setBuyNowProduct(product));
+        navigate("/checkout");
+    };
+
+
+    // if (!itemdata) {
+    //     return <div>Product not found</div>;
+    // }
 
     if (!itemdata) {
-        return <div>Product not found</div>;
+        return (
+            <div className="py-[150px] text-center text-xl font-semibold">
+                Loading Product...
+            </div>
+        );
     }
 
 
@@ -85,10 +108,7 @@ const CartforApi = () => {
                         </div>
                     </div>
 
-                    <div className="cart-btn">
-                        <button onClick={() => dispatch(addToCart(itemdata))}
-                            className="bg-green-600 w-[300px] border text-white p-2 hover:bg-green-700 ">Buy Now</button>
-                    </div>
+
                 </div>
 
                 <div className="w-[40%] bg-white">
@@ -113,6 +133,24 @@ const CartforApi = () => {
                             <img className="w-[100px] m-[2px]" src={optionimg} alt="" />
 
                         </div>
+                    </div>
+
+                    <div className="cart-btn flex flex-row justify-center gap-4 mt-30">
+
+                        <button
+                            onClick={handleBuyNow}
+                            className="bg-[#6c63ff] w-[250px] text-white p-2 hover:bg-[#5a31f4] rounded transition-colors ml-[50px]"
+                        >
+                            Buy Now
+                        </button>
+
+                        <button
+                            onClick={handleAddToCart}
+                            className="bg-[#6c63ff] w-[250px] text-white p-2 hover:bg-[#5a31f4] rounded transition-colors ml-[50px]"
+                        >
+                            Add to Cart
+                        </button>
+
                     </div>
 
                 </div>

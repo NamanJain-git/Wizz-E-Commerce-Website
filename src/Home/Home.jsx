@@ -16,21 +16,6 @@ import dryfruit_img from "../assets/Productimgs/dryfruits.jpeg"
 import dumbel_img from "../assets/Productimgs/gymproduct2.jpeg"
 import bag_img from "../assets/Productimgs/gymbags.jpeg"
 
-import facewash_img from "../assets/Productimgs/facewash.jpeg"
-import hairclaws_img from "../assets/Productimgs/hairclaws.jpeg"
-import shampoo_img from "../assets/Productimgs/shampoo.jpeg"
-import moisturizer_img from "../assets/Productimgs/moisturizer.jpeg"
-
-import hometemple_img from "../assets/Productimgs/hometemple.jpeg"
-import drawer_img from "../assets/Productimgs/drawer.jpeg"
-import wardrobe_img from "../assets/Productimgs/wardrobe.jpeg"
-import chair_img from "../assets/Productimgs/chair.jpeg"
-
-import womenproduct5 from "../assets/Productimgs/womenproduct5.jpeg"
-import menproduct9 from "../assets/Productimgs/menproduct9.jpeg"
-import kidsproduct1 from "../assets/Productimgs/kidsproduct1.jpeg"
-import womenproduct6 from "../assets/Productimgs/womenproduct6.jpeg"
-
 import womenbannerimg from "../assets/Bannerimg/womenbanner.jpg"
 
 import Carouselfunc from "../Carousel/Carouselpage";
@@ -39,6 +24,7 @@ import Api from "../Api/Api1";
 import Api2 from "../Api/Api2";
 import "./Home.css"
 import { useSearch } from "../Usecontext/Usecontext"
+import { skincare_products, home_products, festival_products } from "../Categorypage/CategoryArray";
 
 
 
@@ -66,28 +52,6 @@ export const sports = [
     { id: 304, title: "Dumbels", category: "dumbles", name: "Dumbels", price: 999, discount: "Min. 4%", image: dumbel_img },
     { id: 305, title: "Bags", category: "bags", name: "Bags", price: 599, discount: "Min. 10%", image: bag_img },
 ]
-
-export const haircare = [
-    { id: 401, title: "Mama Earth Facewash", name: "Facewash", discount: "Min. 5% off", image: facewash_img },
-    { id: 402, title: "Flower Hair Claws", name: "Hair claws", discount: "Min. 5% off", image: hairclaws_img },
-    { id: 403, title: "Flix Shampoo", name: "Shampoo", discount: "Min. 5% off", image: shampoo_img },
-    { id: 404, title: "Moisturizer", name: "Moisturizer", discount: "Min. 5% off", image: moisturizer_img }
-]
-
-export const furniture = [
-    { id: 501, title: "Home Temple ", name: "Home Temple", price: 8999, discount: "Min. 10% off", image: hometemple_img },
-    { id: 502, title: "Drawers", name: "Drawer", price: 6999, discount: "Min. 10% off", image: drawer_img },
-    { id: 503, title: "Wardrobe", name: "Wardrob", price: 3999, discount: "Min. 10% off", image: wardrobe_img },
-    { id: 504, title: "Chairs", name: "Chair", price: 599, discount: "Min. 10% off", image: chair_img }
-]
-
-export const festival = [
-    { id: 601, title: "Dell LCD", name: "Saree", discount: "Min. 30% off", image: womenproduct5 },
-    { id: 602, title: "Dell LCD", name: "Men suit", discount: "Min. 20% off", image: menproduct9 },
-    { id: 603, title: "Dell LCD", name: "Kids suit", discount: "Min. 20% off", image: kidsproduct1 },
-    { id: 604, title: "Dell LCD", name: "Women Gown", discount: "Min. 10% off", image: womenproduct6 }
-]
-
 
 const Home = () => {
     const { search } = useSearch();
@@ -176,9 +140,11 @@ const Home = () => {
                         <h2>Hair & Skin care</h2>
                     </div>
                     <div className="grid_products">
-                        {haircare.map((item) => (
+                        {skincare_products.map((item) => (
                             <div className="image" key={item.id}>
-                                <img src={item.image} alt="" />
+                                <Link to={`/cart/${item.id}`}>
+                                    <img src={item.image} alt={item.title} />
+                                </Link>
                                 <p>{item.name}</p>
                                 <p>{item.discount}</p>
                             </div>
@@ -191,9 +157,11 @@ const Home = () => {
                         <h2>Make your home stylish</h2>
                     </div>
                     <div className="grid_products">
-                        {furniture.map((item) => (
+                        {home_products.map((item) => (
                             <div key={item.id}>
-                                <img src={item.image} alt="" />
+                                <Link to={`/cart/${item.id}`}>
+                                    <img src={item.image} alt={item.title} />
+                                </Link>
                                 <p>{item.name}</p>
                                 <p>{item.discount}</p>
                             </div>
@@ -205,12 +173,18 @@ const Home = () => {
                     <div className="title">
                         <h2>Festival Specials</h2>
                     </div>
+
                     <div className="grid_products">
-                        {festival.map((item) => (
+                        {festival_products.map((item) => (
                             <div key={item.id}>
-                                <img src={item.image} alt="" />
+
+                                <Link to={`/cart/${item.id}`}>
+                                    <img src={item.image} alt={item.title} />
+                                </Link>
+
                                 <p>{item.name}</p>
                                 <p>{item.discount}</p>
+
                             </div>
                         ))}
                     </div>

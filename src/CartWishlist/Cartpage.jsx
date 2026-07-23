@@ -110,7 +110,6 @@ const Cartpage = () => {
         </>
       )}
 
-      {/* ✅ Show card only when checkout is clicked */}
       {showCard && (
         <div className="checkout-card mt-8 bg-white border p-10 text-center rounded w-1/2 mx-auto shadow-sm">
           <h1 className="text-xl font-bold">Checkout Complete 🎉</h1>

@@ -29,7 +29,7 @@ const Api = () => {
     <div className="apibox mt-10 gap-30">
       {data.slice(0, 6).map((item) => (
         <div key={item.id} className="apiproducts" >
-          <Link to={`/description/${item.id}`}>
+           <Link to={`/cartforapi/${item.id}`}>
             <img src={item.image} alt="" width={300} />
           </Link>
           <p><strong>{item.title}</strong></p>
