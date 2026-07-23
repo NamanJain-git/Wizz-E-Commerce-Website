@@ -28,19 +28,14 @@ const CartforApi = () => {
     }, [id]);
 
     const handleAddToCart = () => {
-        dispatch(addToCart(itemdata));
+        dispatch(addToCart({ ...itemdata, quantity: count,}) );
         alert("Product Added to Cart");
     };
 
     const handleBuyNow = () => {
-        dispatch(setBuyNowProduct(product));
+        dispatch(setBuyNowProduct({ ...itemdata, quantity: count,}) );
         navigate("/checkout");
     };
-
-
-    // if (!itemdata) {
-    //     return <div>Product not found</div>;
-    // }
 
     if (!itemdata) {
         return (
@@ -49,7 +44,6 @@ const CartforApi = () => {
             </div>
         );
     }
-
 
     return (
         <section className="py-[150px] min-h-screen bg-gray-100">
@@ -84,14 +78,7 @@ const CartforApi = () => {
 
                             <button
                                 className="w-10 h-10 bg-red-500 text-white rounded-full hover:bg-red-600 transition flex items-center justify-center"
-                                onClick={() => {
-                                    if (count > 1) {
-                                        setCount(count - 1);
-                                    }
-                                }}
-                            >
-
-
+                                onClick={() => { if (count > 1) { setCount(count - 1); } }} >
                                 -
                             </button>
 
@@ -99,15 +86,13 @@ const CartforApi = () => {
 
                             <button
                                 className="w-8 h-8 bg-green-500 text-white rounded-full hover:bg-green-600 transition flex items-center justify-center"
-                                onClick={() => setCount(count + 1)}
-                            >
+                                onClick={() => setCount(count + 1)} >
                                 +
                             </button>
 
                             <p className="font-bold text-center m-4">Choose Quantity</p>
                         </div>
                     </div>
-
 
                 </div>
 

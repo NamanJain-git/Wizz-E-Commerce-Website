@@ -7,7 +7,6 @@ import { allProducts } from "../Categorypage/CategoryArray";
 import Carouselfunc from "../Carousel/Carouselpage";
 import optionimg from "../assets/Headimgs/head2.png";
 import { addToCart } from "../Slice/Slicecart";
-import { clearCart } from "../Slice/Slicecart";
 import { setBuyNowProduct } from "../Slice/Slicecart";
 
 const Cart = () => {
@@ -16,17 +15,16 @@ const Cart = () => {
     const navigate = useNavigate();
 
     const handleBuyNow = () => {
-        dispatch(setBuyNowProduct(product));
+        dispatch(setBuyNowProduct({ ...cartItem, quantity: count, }));
         navigate("/checkout");
     };
 
     const handleAddToCart = () => {
-        dispatch(addToCart(cartItem));
+        dispatch( addToCart({ ...cartItem, quantity: count, }) );
         alert("Product Added Successfully");
     };
 
     const { id } = useParams();
-    // const cartItem = electronics.find((item) => item.id === parseInt(id)) || toys.find((item) => item.id === parseInt(id)) || sports.find((item) => item.id === parseInt(id));
 
     const cartItem = allProducts.find(
         (item) => item.id === parseInt(id)
