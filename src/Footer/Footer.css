@@ -48,10 +48,12 @@ footer .question {
     text-decoration: underline;
 }
 
-.address {
-    display: flex;
-    justify-content: space-around;
-    border-left: 1px solid #454d5e;
+.address{
+    display:flex;
+    justify-content:flex-start;
+    gap:40px;
+    border-left:1px solid #454d5e;
+    padding-left:20px;
 }
 
 .address span {
@@ -65,7 +67,7 @@ footer .question {
     display: flex;
     flex-direction: column;
     color: white;
-    margin-left: 60px;
+    margin-left: 0px;
 }
 
 .address p {
@@ -93,4 +95,26 @@ footer .question {
     font-size: 14px;
     font-weight: 400;
     margin-top: 30px;
+}
+
+@media (max-width:768px){
+
+    .footer{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .queries,
+    .address{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .address{
+        border-left:none;
+        padding-left:0;
+    }
+
+    .address p{
+        word-break:break-word;
+    }
 }

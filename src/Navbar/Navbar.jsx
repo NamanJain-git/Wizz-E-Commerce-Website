@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import logo from "../assets/Productimgs/logo.jpg"
 import "./Navbar.css"
 import { useSearch } from "../Usecontext/Usecontext";
+import { useState } from "react";
 import Dropdown from 'react-bootstrap/Dropdown';
 import ProfileDropdown from "./Dropdown";
 import { useSelector } from "react-redux";
@@ -9,12 +10,16 @@ import { CgProfile } from "react-icons/cg";
 import { FaHeart } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
+import { FaTimesCircle } from "react-icons/fa";
+import { FaBars } from "react-icons/fa6";
 
 const Nav = () => {
     const { search, setSearch } = useSearch();
 
     const cartItems = useSelector((state) => state.cart.items);
     const totalCartItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+
+    const [menuOpen, setMenuOpen] = useState(false);
 
     return (
 
@@ -24,7 +29,7 @@ const Nav = () => {
                     <img src={logo} alt="" />
                 </div>
 
-                <ul className="main">
+                <ul className={menuOpen ? "main active" : "main"}>
                     <Link to="/" style={{ color: "black", textDecoration: "none" }}><li>Home</li></Link>
                     <Link to="/men" style={{ color: "black", textDecoration: "none" }}><li>Men</li></Link>
                     <Link to="/women" style={{ color: "black", textDecoration: "none" }}><li>Women</li></Link>
@@ -61,9 +66,20 @@ const Nav = () => {
                     </div>
                 </div>
 
+                <div
+                    className="menu-icon"
+                    onClick={() => setMenuOpen(!menuOpen)}
+                >
+                    {menuOpen ? <FaTimesCircle size={24} /> : <FaBars size={24} />}
+                </div>
 
             </nav>
         </header>
     )
 }
 export default Nav
+
+
+
+{/* <FaTimesCircle /> */ }
+{/* <FaBars /> */ }

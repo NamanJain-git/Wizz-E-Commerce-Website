@@ -21,3 +21,27 @@
     width: 150px;
     height: 150px;
 }
+
+@media (max-width:768px){
+
+    .apibox{
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 16px;
+        scrollbar-width: none;
+    }
+
+    .apibox::-webkit-scrollbar{
+        display: none;
+    }
+
+    .apiproducts{
+        flex: 0 0 140px;
+        gap: 15px;
+    }
+
+    .apiproducts img{
+        width:120px;
+        height:120px;
+    }
+}

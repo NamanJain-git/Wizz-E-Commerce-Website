@@ -6,7 +6,7 @@ import banner3 from "../assets/Bannerimg/banner3.jpeg";
 
 function Carouselfunc() {
     return (
-        <div>
+        
             <Carousel className="mt-4">
                 <Carousel.Item>
                     <img
@@ -30,7 +30,7 @@ function Carouselfunc() {
 
                 </Carousel.Item>
             </Carousel>
-        </div>
+        
     )
 }
 
