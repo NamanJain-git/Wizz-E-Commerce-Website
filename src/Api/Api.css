@@ -9,17 +9,24 @@
     margin-top: 20px;
 }
 
-.apiproducts {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    justify-content: center;
-    align-items: center;
+.apiproducts{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    width:170px;
+    flex-shrink:0;
 }
 
 .apiproducts img{
     width: 150px;
     height: 150px;
+}
+
+.apiproducts p{
+    width:100%;
+    font-size:14px;
+    word-break:break-word;
 }
 
 @media (max-width:768px){
@@ -37,7 +44,7 @@
 
     .apiproducts{
         flex: 0 0 140px;
-        gap: 15px;
+        gap: 10px;
     }
 
     .apiproducts img{

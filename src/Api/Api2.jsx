@@ -39,13 +39,13 @@ const Api2 = () => {
   if (error) return <p>{error}</p>;
 
   return (
-    <div className="apibox mt-20 gap-30">
+    <div className="apibox">
       {data.slice(14, 20).map((item) => (
         <div className="apiproducts" key={item.id}>
           <Link to={`/cartforapi/${item.id}`}>
-            <img src={item.image} alt={item.title} width={300} />
+            <img src={item.image} alt={item.title} />
           </Link>
-          <p><strong>{item.title}</strong></p>
+          <p> <strong> {item.title.length > 35 ? item.title.slice(0, 35) + "..." : item.title} </strong> </p>
         </div>
       ))}
     </div>
