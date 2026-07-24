@@ -1,54 +1,62 @@
 .apibox {
     display: flex;
+    gap: 20px;
+    justify-content: space-around;
     padding: 20px;
-    justify-content: center;
-    text-align: center;
-    background-color: white;
+    background: white;
     box-shadow: 2px 0px 10px rgb(189, 183, 183);
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
-.apiproducts{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
-    width:170px;
-    flex-shrink:0;
+.apiproducts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-around;
 }
 
-.apiproducts img{
+.apiproducts img {
     width: 150px;
     height: 150px;
+    object-fit: contain;
 }
 
-.apiproducts p{
-    width:100%;
-    font-size:14px;
-    word-break:break-word;
+.apiproducts p {
+    width: 100%;
+    font-size: 14px;
+    margin-top: 10px;
+    min-height: 42px;
+    line-height: 1.4;
+    overflow-wrap: break-word;
 }
 
-@media (max-width:768px){
+/* ---------------- Mobile ---------------- */
 
-    .apibox{
+@media (max-width:768px) {
+
+    .apibox {
         overflow-x: auto;
-        justify-content: flex-start;
-        gap: 16px;
+        flex-wrap: nowrap;
         scrollbar-width: none;
+        padding-bottom: 10px;
     }
 
-    .apibox::-webkit-scrollbar{
+    .apibox::-webkit-scrollbar {
         display: none;
     }
 
-    .apiproducts{
-        flex: 0 0 140px;
-        gap: 10px;
+    .apiproducts {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        scrollbar-width: none;
+        padding-bottom: 10px;
     }
 
-    .apiproducts img{
-        width:120px;
-        height:120px;
+    .apiproducts::-webkit-scrollbar {
+        display: none;
+    }
+
+    .apiproducts>div {
+        flex: 0 0 140px;
     }
 }

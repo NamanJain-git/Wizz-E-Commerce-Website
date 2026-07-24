@@ -1,21 +1,21 @@
 .home {
-    padding: 90px 30px 30px;
+    padding: 90px 15px 15px;
     margin: 20px auto;
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
 
+/* ---------------- Products ---------------- */
+
 .products_box {
-    padding: 40px;
-    text-align: center;
-    background-color: white;
+    padding: 30px;
+    background: white;
     box-shadow: 2px 0px 10px rgb(189, 183, 183);
 }
 
 .products_box .title {
-    text-align: left;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 }
 
 .products_box .title h1 {
@@ -24,44 +24,33 @@
 
 .products {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     gap: 20px;
 }
 
-/* .products img {
-    width: 150px;
-    height: 150px;
-} */
-
-.products div {
+.products > div {
     text-align: center;
-    flex-shrink: 0;
 }
 
 .products img {
     width: 150px;
     height: 150px;
     object-fit: contain;
-    transition: transform 0.3s ease;
+    transition: transform .3s;
 }
 
 .products img:hover {
     transform: scale(1.05);
 }
 
-.grid_section_01 {
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
+/* ---------------- Grid ---------------- */
 
+.grid_section_01,
 .grid_section_02 {
     display: flex;
-    gap: 20px;
-    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .grid_box {
@@ -70,85 +59,114 @@
     background: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 2px 0px 10px rgb(189, 183, 183);
+    box-shadow: 2px 0px 10px rgb(189,183,183);
 }
 
 .grid_box .title h2 {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     font-size: 20px;
 }
 
-
 .grid_products {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2,1fr);
     gap: 15px;
 }
 
-
 .grid_products div {
-    background-color: white;
-    padding: 10px;
-    text-align: center;
     border: 1px solid #ddd;
     border-radius: 6px;
-    transition: transform 0.2s ease;
+    padding: 10px;
+    text-align: center;
+    transition: .2s;
 }
 
 .grid_products div:hover {
     transform: scale(1.05);
 }
 
-.grid_products div img {
+.grid_products img {
     width: 100%;
     height: 180px;
     object-fit: contain;
 }
 
-.saleImgs {
-    display: flex;
-    margin-top: 10px;
-}
+/* ---------------- Banner ---------------- */
 
 .saleImgs img {
     width: 100%;
-    height: auto;
+    display: block;
     border-radius: 8px;
 }
 
-@media (max-width:768px) {
+/* ---------------- Tablet ---------------- */
 
-    .home {
-        padding: 90px 15px 15px;
-        margin: 10px auto;
+@media (max-width:992px){
+
+    .products_box{
+        padding:20px;
     }
 
-    .products {
-        justify-content: flex-start;
-        overflow-x: auto;
-        flex-wrap: nowrap;
-        gap: 16px;
-        scrollbar-width: none;
+    .products{
+        overflow-x:auto;
+        flex-wrap:nowrap;
+        justify-content:flex-start;
+        gap:16px;
+        padding-bottom:10px;
+        -webkit-overflow-scrolling:touch;
+        scrollbar-width:none;
     }
 
-    .products::-webkit-scrollbar {
-        display: none;
+    .products::-webkit-scrollbar{
+        display:none;
     }
 
-    .products div {
-        flex: 0 0 140px;
+    .products > div{
+        flex:0 0 140px;
     }
 
-    .products img {
-        width: 120px;
-        height: 120px;
+    .products img{
+        width:120px;
+        height:120px;
     }
 
-    .grid_box {
-        max-width: 100%;
+    .grid_box{
+        flex:1 1 100%;
+        min-width:100%;
     }
 
-    .grid_products div img {
-        height: 140px;
+    .grid_products img{
+        height:150px;
+    }
+}
+
+/* ---------------- Mobile ---------------- */
+
+@media (max-width:576px){
+
+    .home{
+        padding:90px 10px 10px;
+        margin:0;
+    }
+
+    .products_box{
+        padding:15px;
+    }
+
+    .products > div{
+        flex:0 0 130px;
+    }
+
+    .products img{
+        width:110px;
+        height:110px;
+    }
+
+    .grid_products{
+        gap:10px;
+    }
+
+    .grid_products img{
+        height:120px;
     }
 }
