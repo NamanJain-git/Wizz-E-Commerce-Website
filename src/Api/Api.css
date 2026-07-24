@@ -1,7 +1,7 @@
 .apibox {
     display: flex;
     gap: 20px;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 20px;
     background: white;
     box-shadow: 2px 0px 10px rgb(189, 183, 183);
@@ -11,8 +11,8 @@
 .apiproducts {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    justify-content: space-around;
+    align-items: center;
+    text-align: center;
 }
 
 .apiproducts img {
@@ -30,33 +30,34 @@
     overflow-wrap: break-word;
 }
 
-/* ---------------- Mobile ---------------- */
+/* ---------- Mobile ---------- */
 
-@media (max-width:768px) {
+@media (max-width: 992px){
 
-    .apibox {
-        overflow-x: auto;
-        flex-wrap: nowrap;
-        scrollbar-width: none;
-        padding-bottom: 10px;
+    .apibox{
+        overflow-x:auto;
+        justify-content:flex-start;
+        flex-wrap:nowrap;
+        gap:16px;
+        -webkit-overflow-scrolling:touch;
+        scrollbar-width:none;
     }
 
-    .apibox::-webkit-scrollbar {
-        display: none;
+    .apibox::-webkit-scrollbar{
+        display:none;
     }
 
-    .apiproducts {
-        overflow-x: auto;
-        flex-wrap: nowrap;
-        scrollbar-width: none;
-        padding-bottom: 10px;
+    .apiproducts{
+        flex:0 0 150px;
+        flex-shrink:0;
     }
 
-    .apiproducts::-webkit-scrollbar {
-        display: none;
+    .apiproducts img{
+        width:120px;
+        height:120px;
     }
 
-    .apiproducts>div {
-        flex: 0 0 140px;
+    .apiproducts p{
+        font-size:13px;
     }
 }
