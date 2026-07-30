@@ -1,29 +1,96 @@
 .beauty {
-    padding: 150px;
+    padding: 110px 20px 20px;
+}
+
+.beauty > img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
 }
 
 .beauty_products_box {
     padding: 20px;
-    text-align: center;
-    background-color: white;
+    background: white;
     box-shadow: 2px 0px 10px rgb(189, 183, 183);
-}
-
-.beauty_products_upper {
-    display: flex;
-    gap: 100px;
-    justify-content: center;
+    border-radius: 10px;
 }
 
 .beauty_products {
     display: flex;
-    gap: 100px;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.beauty_products > div {
+    flex: 1;
 }
 
 .beauty_products img {
-    width: 320px;
+    width: 100%;
+    max-width: 320px;
     height: 360px;
     object-fit: cover;
     border-radius: 8px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.beauty_products img:hover {
+    transform: scale(1.03);
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width:992px) {
+
+    .beauty {
+        padding: 100px 15px 15px;
+    }
+
+    .beauty_products {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 16px;
+        padding-bottom: 10px;
+        scrollbar-width: none;
+    }
+
+    .beauty_products::-webkit-scrollbar {
+        display: none;
+    }
+
+    .beauty_products > div {
+        flex: 0 0 180px;
+    }
+
+    .beauty_products img {
+        width: 180px;
+        height: 220px;
+    }
+
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:576px) {
+
+    .beauty {
+        padding: 90px 10px 10px;
+    }
+
+    .beauty_products_box {
+        padding: 15px;
+    }
+
+    .beauty_products > div {
+        flex: 0 0 150px;
+    }
+
+    .beauty_products img {
+        width: 150px;
+        height: 190px;
+    }
+
 }

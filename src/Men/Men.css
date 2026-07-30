@@ -1,22 +1,92 @@
-.men{
-    padding: 150px;
+.men {
+    padding: 110px 20px 20px;
+}
+
+.men>img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
 }
 
 .men_products_box {
     padding: 20px;
-    text-align: center;
-    background-color: white;
+    background: white;
     box-shadow: 2px 0px 10px rgb(189, 183, 183);
+    border-radius: 10px;
 }
 
 .men_products {
     display: flex;
-    gap: 100px;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
+
+.men_products>div {
+    flex: 1;
+}
+
 .men_products img {
-   width: 320px;
+    width: 100%;
+    max-width: 320px;
     height: 360px;
     object-fit: cover;
     border-radius: 8px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.men_products img:hover {
+    transform: scale(1.03);
+}
+
+@media (max-width:992px) {
+
+    .men {
+        padding: 100px 15px 15px;
+    }
+
+    .men_products {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 16px;
+        padding-bottom: 10px;
+        scrollbar-width: none;
+    }
+
+    .men_products::-webkit-scrollbar {
+        display: none;
+    }
+
+    .men_products>div {
+        flex: 0 0 180px;
+    }
+
+    .men_products img {
+        width: 180px;
+        height: 220px;
+    }
+
+}
+
+@media (max-width:576px) {
+
+    .men {
+        padding: 90px 10px 10px;
+    }
+
+    .men_products_box {
+        padding: 15px;
+    }
+
+    .men_products>div {
+        flex: 0 0 150px;
+    }
+
+    .men_products img {
+        width: 150px;
+        height: 190px;
+    }
+
 }

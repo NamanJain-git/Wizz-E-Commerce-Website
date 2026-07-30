@@ -48,8 +48,7 @@ const CategoryCard = ({ product }) => {
         <div className="price-details">
           <h3>₹{product.price}/-</h3>
           <p><span>4.5⭐ </span>38,835 ratings & 1930 Reviews</p>
-          <p>{product.discount} off</p>
-
+          <p className="discount">{product.discount} off</p>
           {/* <div className="btns"> */}
           <div className="btns">
             <button onClick={handleAddToCart} className="buy-btn">Add to Cart</button>

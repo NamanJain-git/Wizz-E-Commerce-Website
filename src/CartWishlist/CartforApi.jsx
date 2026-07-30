@@ -5,7 +5,6 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
 import Carouselfunc from "../Carousel/Carouselpage";
-import optionimg from "../assets/Headimgs/head2.png";
 import { addToCart } from "../Slice/Slicecart";
 import { setBuyNowProduct } from "../Slice/Slicecart";
 
@@ -28,12 +27,12 @@ const CartforApi = () => {
     }, [id]);
 
     const handleAddToCart = () => {
-        dispatch(addToCart({ ...itemdata, quantity: count,}) );
+        dispatch(addToCart({ ...itemdata, quantity: count, }));
         alert("Product Added to Cart");
     };
 
     const handleBuyNow = () => {
-        dispatch(setBuyNowProduct({ ...itemdata, quantity: count,}) );
+        dispatch(setBuyNowProduct({ ...itemdata, quantity: count, }));
         navigate("/checkout");
     };
 
@@ -46,35 +45,34 @@ const CartforApi = () => {
     }
 
     return (
-        <section className="py-[150px] min-h-screen bg-gray-100">
-            <div className="flex max-w-full mb-[40px] bg-gray-50 ">
-                <div className="flex cart-left w-[60%] flex-col justify-center items-center p-[15px] gap-[20px]">
-
-                    <div className="flex gap-[80px] items-center bg-white border">
+        <section className="min-h-screen bg-gray-100 pt-24 px-4 sm:px-6 lg:px-10">
+            <div className="flex flex-col lg:flex-row max-w-full mb-10 bg-gray-50">
+                <div className="flex flex-col w-full lg:w-[60%] justify-center items-center p-4 gap-5">
+                    <div className="flex flex-col md:flex-row gap-6 items-center bg-white border rounded-lg p-4 w-full">
                         <div className="">
-                            <img className="w-[300px] m-[4px] border" src={itemdata.image} alt={itemdata.title} />
+                            <img className="w-52 sm:w-64 md:w-72 lg:w-[300px] border rounded-lg p-2 object-contain" src={itemdata.image} alt={itemdata.title} />
                         </div>
-                        <div className="">
+                        <div className="flex-1 text-center md:text-left">
                             <p className="font-bold">{itemdata.title}</p>
                             <p><span className="bg-green-500 rounded-[6px] text-white m-[2px] font-bold">4.5 ⭐ </span> 38,835 ratings & 1930 Reviews</p>
                             <h3 className="m-[4px]">₹{itemdata.price}/-</h3>
                         </div>
-                        <div className="delivery-date m-[2px] font-[600]">
+                        <div className="font-semibold text-center md:text-right">
                             <p>Delivery by Mon 18</p>
                         </div>
                     </div>
 
-                    <div className="bg-white m-[4px] p-[4px] shadow ">
+                    <div className="bg-white p-4 shadow rounded-lg w-full">
                         <span className="m-[6px] bg-green-500 rounded-[2px] text-white  font-bold">Available offers</span>
-                        <p className="m-[2px]">Bank Offer5% cashback on Flipkart Axis Bank Credit Card upto ₹4,000 per statement quarterT&C</p>
-                        <p className="m-[2px]">Bank OfferUp To ₹30 Instant Cashback on BHIM Payments App. Min Order Value ₹199. Offer Valid Once Per UserT&C</p>
-                        <p className="m-[2px]">Special PriceGet extra ₹4000 off (price inclusive of cashback/coupon)T&C</p>
+                        <p className="m-[2px] break-words">Bank Offer5% cashback on Flipkart Axis Bank Credit Card upto ₹4,000 per statement quarterT&C</p>
+                        <p className="m-[2px] break-words">Bank OfferUp To ₹30 Instant Cashback on BHIM Payments App. Min Order Value ₹199. Offer Valid Once Per UserT&C</p>
+                        <p className="m-[2px] break-words">Special PriceGet extra ₹4000 off (price inclusive of cashback/coupon)T&C</p>
                         <span className="bg-green-500 rounded-[2px] text-white m-[2px] font-bold">View 5 more offers</span>
                     </div>
 
 
-                    <div className="flex items-center justify-center bg-gray-100">
-                        <div className="flex items-center gap-4 shadow p-1 rounded-lg">
+                    <div className="flex justify-center w-full">
+                        <div className="flex flex-wrap justify-center items-center gap-4 shadow p-3 rounded-lg bg-white">
 
                             <button
                                 className="w-10 h-10 bg-red-500 text-white rounded-full hover:bg-red-600 transition flex items-center justify-center"
@@ -96,9 +94,9 @@ const CartforApi = () => {
 
                 </div>
 
-                <div className="w-[40%] bg-white">
+                <div className="w-full lg:w-[40%] bg-white rounded-lg shadow">
 
-                    <div className="m-[50px] font-bold">
+                    <div className="p-6 font-bold">
                         <h3>Price Details</h3>
 
                         <p>Price {count}: <span className="text-green-500"> ₹{itemdata.price * count}/-</span></p>
@@ -107,31 +105,18 @@ const CartforApi = () => {
                         <p>Total Price: <span className="text-green-500"> ₹{itemdata.price * count - disc + extraFee}/-</span></p>
                     </div>
 
-                    <div className="flex-column m-[10px]">
-                        <h4>More Options</h4>
-                        <div className="flex m-[15px]">
-                            <img className="w-[100px] m-[2px]" src={optionimg} alt="" />
-                            <img className="w-[100px] m-[2px]" src={optionimg} alt="" />
-                            <img className="w-[100px] m-[2px]" src={optionimg} alt="" />
-                            <img className="w-[100px] m-[2px]" src={optionimg} alt="" />
-                            <img className="w-[100px] m-[2px]" src={optionimg} alt="" />
-                            <img className="w-[100px] m-[2px]" src={optionimg} alt="" />
-
-                        </div>
-                    </div>
-
-                    <div className="cart-btn flex flex-row justify-center gap-4 mt-30">
+                    <div className="cart-btn flex flex-col sm:flex-row justify-center gap-4 mt-10 p-6">
 
                         <button
                             onClick={handleBuyNow}
-                            className="bg-[#6c63ff] w-[250px] text-white p-2 hover:bg-[#5a31f4] rounded transition-colors ml-[50px]"
+                            className="bg-[#6c63ff] w-full sm:w-1/2 text-white p-3 hover:bg-[#5a31f4] rounded transition-colors"
                         >
                             Buy Now
                         </button>
 
                         <button
                             onClick={handleAddToCart}
-                            className="bg-[#6c63ff] w-[250px] text-white p-2 hover:bg-[#5a31f4] rounded transition-colors ml-[50px]"
+                            className="bg-[#6c63ff] w-full sm:w-1/2 text-white p-3 hover:bg-[#5a31f4] rounded transition-colors"
                         >
                             Add to Cart
                         </button>

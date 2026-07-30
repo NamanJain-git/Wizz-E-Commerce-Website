@@ -9,29 +9,33 @@ const Women = () => {
         <section className="women">
             <img src={womenbanner} alt="" />
 
-            <div className="women_products">
-                {womens_products.slice(0, 4).map((item) => (
-                    <div key={item.id}>
-                        <Link to={`/cart/${item.id}`}>
-                            <img src={item.image} alt={item.title} />
-                        </Link>
-                    </div>
-                ))}
+            <div className="women_products_box mt-10 mb-10">
+                <div className="women_products">
+                    {womens_products.slice(0, 4).map((item) => (
+                        <div key={item.id}>
+                            <Link to={`/cart/${item.id}`}>
+                                <img src={item.image} alt={item.title} />
+                            </Link>
+                        </div>
+                    ))}
+                </div>
             </div>
 
             <Api2 />
 
-            <div className="women_products">
-                {womens_products.slice(4, 8).map((item) => (
-                    <div key={item.id}>
-                        <Link to={`/cart/${item.id}`}>
-                            <img src={item.image} alt={item.title} />
-                        </Link>
-                    </div>
-                ))}
+            <div className="women_products_box mt-10 mb-10">
+                <div className="women_products">
+                    {womens_products.slice(4, 8).map((item) => (
+                        <div key={item.id}>
+                            <Link to={`/cart/${item.id}`}>
+                                <img src={item.image} alt={item.title} />
+                            </Link>
+                        </div>
+                    ))}
+                </div>
             </div>
 
-        </section >
+        </section>
     )
 }
 export default Women

@@ -1,39 +1,40 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import {
   clearCart,
   removeFromCart,
   increaseQuantity,
   decreaseQuantity,
+  clearBuyNow,
 } from "../Slice/Slicecart";
 
 const Cartpage = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.items);
 
-  const [showCard, setShowCard] = useState(false);
-
   const total = cartItems.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0
   );
 
-  const checkoutCard = () => {
-    if (cartItems.length > 0) {
-      setShowCard(true); // show card when cart is not empty
-    }
+  const navigate = useNavigate();
+  const handleCheckout = () => {
+    dispatch(clearBuyNow());   // Clear previous Buy Now product
+    navigate("/checkout");
   };
 
+
   return (
-    <div className="min-h-screen bg-gray-100 p-50">
-      <h1 className="text-2xl font-bold mb-6">Shopping Cart</h1>
+    <div className="min-h-screen bg-gray-100 pt-24 px-4 sm:px-6 lg:px-12">
+      <h1 className="text-2xl md:text-3xl font-bold mb-6">Shopping Cart</h1>
 
       {cartItems.length === 0 ? (
         <p className="text-gray-600">Your cart is empty</p>
       ) : (
         <>
           <div className="overflow-x-auto">
-            <table className="w-full border border-gray-300 bg-white rounded-lg shadow">
+            <table className="min-w-[700px] w-full border border-gray-300 bg-white rounded-lg shadow">
               <thead className="bg-gray-200">
                 <tr>
                   <th className="py-2 px-4 text-left">Image</th>
@@ -51,7 +52,7 @@ const Cartpage = () => {
                       <img
                         src={item.image}
                         alt={item.name}
-                        className="w-20 h-20 object-contain"
+                        className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
                       />
                     </td>
                     <td className="py-2 px-4 font-medium">{item.name}</td>
@@ -90,17 +91,17 @@ const Cartpage = () => {
             </table>
           </div>
 
-          <div className="mt-6 flex justify-between items-center">
+          <div className="mt-6 flex flex-col md:flex-row gap-4 justify-between items-center">
             <h2 className="text-xl font-semibold">Grand Total: ₹{total}</h2>
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
               <button
                 onClick={() => dispatch(clearCart())}
-                className="bg-gray-500 text-white px-6 py-2 rounded-lg hover:bg-gray-600"
+                className="w-full sm:w-auto bg-gray-500 text-white px-6 py-2 rounded-lg hover:bg-gray-600"
               >
                 Clear Cart
               </button>
               <button
-                onClick={checkoutCard}
+                onClick={handleCheckout}
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
               >
                 Checkout
@@ -110,17 +111,6 @@ const Cartpage = () => {
         </>
       )}
 
-      {showCard && (
-        <div className="checkout-card mt-8 bg-white border p-10 text-center rounded w-1/2 mx-auto shadow-sm">
-          <h1 className="text-xl font-bold">Checkout Complete 🎉</h1>
-          <button
-            onClick={() => setShowCard(false)}
-            className="mt-4 bg-[#6c63ff] text-white px-4 py-2 rounded font-bold hover:bg-[#5a52e6]"
-          >
-            Close
-          </button>
-        </div>
-      )}
     </div>
   );
 };

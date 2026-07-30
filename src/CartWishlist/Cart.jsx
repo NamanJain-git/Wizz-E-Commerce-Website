@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 
 import { allProducts } from "../Categorypage/CategoryArray";
 import Carouselfunc from "../Carousel/Carouselpage";
-import optionimg from "../assets/Headimgs/head2.png";
 import { addToCart } from "../Slice/Slicecart";
 import { setBuyNowProduct } from "../Slice/Slicecart";
 
@@ -20,7 +19,7 @@ const Cart = () => {
     };
 
     const handleAddToCart = () => {
-        dispatch( addToCart({ ...cartItem, quantity: count, }) );
+        dispatch(addToCart({ ...cartItem, quantity: count, }));
         alert("Product Added Successfully");
     };
 
@@ -39,113 +38,186 @@ const Cart = () => {
 
 
     return (
-        <section >
-            <div className="min-h-screen w-full bg-gray-100">
-                <div className="min-h-screen flex max-w-full mb-[40px] bg-gray-50 ">
-                    <div className="flex cart-left w-[60%] flex-col justify-center items-center p-[15px] gap-[20px]">
+        <section>
 
-                        <div className="flex gap-[80px] items-center bg-white border">
-                            <div className="">
-                                <img className="w-[300px] m-[4px] border" src={cartItem.image} alt={cartItem.title} />
+           <div className="min-h-screen w-full bg-gray-100 pt-24">
+
+                {/* Main Layout */}
+                <div className="flex flex-col lg:flex-row min-h-screen bg-gray-50">
+
+                    {/* Left Section */}
+                    <div className="w-full lg:w-[60%] flex flex-col justify-center items-center p-4 gap-6">
+
+                        {/* Product Card */}
+                        <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12 bg-white border rounded-lg shadow-sm p-5 w-full">
+
+                            <div className="flex justify-center">
+                                <img
+                                    src={cartItem.image}
+                                    alt={cartItem.title}
+                                    className="w-52 sm:w-64 md:w-72 lg:w-[300px] border p-2 object-contain"
+                                />
                             </div>
-                            <div className="">
-                                <p className="font-bold">{cartItem.title}</p>
-                                <p><span className="bg-green-500 rounded-[6px] text-white m-[2px] font-bold">4.5 ⭐ </span> 38,835 ratings & 1930 Reviews</p>
-                                <h3 className="m-[4px]">₹{cartItem.price}/-</h3>
+
+                            <div className="flex-1 text-center md:text-left">
+
+                                <h2 className="font-bold text-xl">
+                                    {cartItem.title}
+                                </h2>
+
+                                <p className="mt-2">
+                                    <span className="bg-green-500 rounded px-2 py-1 text-white font-bold">
+                                        4.5 ⭐
+                                    </span>{" "}
+                                    38,835 ratings & 1930 Reviews
+                                </p>
+
+                                <h3 className="mt-3 text-2xl font-bold">
+                                    ₹{cartItem.price}/-
+                                </h3>
+
+                                <p className="mt-3 font-semibold">
+                                    Delivery by Mon 18
+                                </p>
+
                             </div>
-                            <div className="delivery-date m-[2px] font-[600]">
-                                <p>Delivery by Mon 18</p>
-                            </div>
+
                         </div>
 
-                        <div className="bg-white m-[4px] p-[4px] shadow ">
-                            <span className="m-[6px] bg-green-500 rounded-[2px] text-white  font-bold">Available offers</span>
-                            <p className="m-[2px]">Bank Offer5% cashback on Flipkart Axis Bank Credit Card upto ₹4,000 per statement quarterT&C</p>
-                            <p className="m-[2px]">Bank OfferUp To ₹30 Instant Cashback on BHIM Payments App. Min Order Value ₹199. Offer Valid Once Per UserT&C</p>
-                            <p className="m-[2px]">Special PriceGet extra ₹4000 off (price inclusive of cashback/coupon)T&C</p>
-                            <span className="bg-green-500 rounded-[2px] text-white m-[2px] font-bold">View 5 more offers</span>
+                        {/* Offers */}
+                        <div className="bg-white shadow rounded-lg p-4 w-full break-words">
+
+                            <span className="bg-green-500 text-white px-2 py-1 rounded font-bold">
+                                Available Offers
+                            </span>
+
+                            <p className="mt-3">
+                                Bank Offer 5% cashback on Flipkart Axis Bank Credit Card upto ₹4,000.
+                            </p>
+
+                            <p className="mt-2">
+                                Up to ₹30 Instant Cashback on BHIM Payments.
+                            </p>
+
+                            <p className="mt-2">
+                                Special Price: Get extra ₹4000 off.
+                            </p>
+
+                            <span className="inline-block mt-3 bg-green-500 text-white px-2 py-1 rounded font-bold">
+                                View 5 more offers
+                            </span>
+
                         </div>
 
+                        {/* Quantity */}
+                        <div className="bg-white shadow rounded-lg p-4">
 
-                        <div className="flex items-center justify-center bg-gray-100">
-                            <div className="flex items-center gap-4 shadow p-1 rounded-lg">
+                            <div className="flex items-center gap-4">
 
                                 <button
-                                    className="w-10 h-10 bg-red-500 text-white rounded-full hover:bg-red-600 transition flex items-center justify-center"
+                                    className="w-10 h-10 bg-red-500 text-white rounded-full"
                                     onClick={() => {
                                         if (count > 1) {
                                             setCount(count - 1);
                                         }
                                     }}
                                 >
-
-
                                     -
                                 </button>
 
-                                <span className="text-2xl font-bold w-12 text-center">{count}</span>
+                                <span className="text-2xl font-bold w-12 text-center">
+                                    {count}
+                                </span>
 
                                 <button
-                                    className="w-8 h-8 bg-green-500 text-white rounded-full hover:bg-green-600 transition flex items-center justify-center"
+                                    className="w-10 h-10 bg-green-500 text-white rounded-full"
                                     onClick={() => setCount(count + 1)}
                                 >
                                     +
                                 </button>
 
-                                <p className="font-bold text-center m-4">Choose Quantity</p>
-                            </div>
-                        </div>
+                                <p className="font-semibold hidden sm:block">
+                                    Choose Quantity
+                                </p>
 
+                            </div>
+
+                        </div>
 
                     </div>
 
-                    <div className="cart-right w-[40%] bg-white pt-[150px]">
+                    {/* Right Section */}
+                    <div className="w-full lg:w-[40%] bg-white p-6 lg:pt-36">
 
-                        <div className="m-[50px] font-bold">
-                            <h3>Price Details</h3>
+                        <div className="font-bold space-y-4">
 
-                            <p>Price {count}: <span className="text-green-500"> ₹{cartItem.price * count}/-</span></p>
-                            <p>Discount: <span className="text-red-500">₹50</span></p>
-                            <p>Protect Promise fee:<span className="text-green-500"> ₹200/-</span></p>
-                            <p>Total Price: <span className="text-green-500"> ₹{cartItem.price * count - disc + extraFee}/-</span></p>
+                            <h3 className="text-2xl">
+                                Price Details
+                            </h3>
+
+                            <p>
+                                Price ({count}) :
+                                <span className="text-green-500">
+                                    {" "}₹{cartItem.price * count}/-
+                                </span>
+                            </p>
+
+                            <p>
+                                Discount :
+                                <span className="text-red-500">
+                                    {" "}₹50
+                                </span>
+                            </p>
+
+                            <p>
+                                Protect Promise Fee :
+                                <span className="text-green-500">
+                                    {" "}₹200/-
+                                </span>
+                            </p>
+
+                            <hr />
+
+                            <p className="text-xl">
+                                Total :
+                                <span className="text-green-500">
+                                    {" "}
+                                    ₹{cartItem.price * count - disc + extraFee}/-
+                                </span>
+                            </p>
+
                         </div>
 
-                        <div className="flex-column m-[10px] pt-[20px]">
-                            <h4>More Options</h4>
-                            <div className="flex m-[15px] pt-[20px]">
-                                <img className="w-[100px] m-[2px]" src={optionimg} alt="" />
-                                <img className="w-[100px] m-[2px]" src={optionimg} alt="" />
-                                <img className="w-[100px] m-[2px]" src={optionimg} alt="" />
-                                <img className="w-[100px] m-[2px]" src={optionimg} alt="" />
-                                <img className="w-[100px] m-[2px]" src={optionimg} alt="" />
-                                <img className="w-[100px] m-[2px]" src={optionimg} alt="" />
+                        {/* Buttons */}
+                        <div className="flex flex-col sm:flex-row gap-4 mt-10">
 
-                            </div>
-                        </div>
-
-                        <div className="cart-btn flex flex-row justify-center gap-4 mt-30">
                             <button
                                 onClick={handleBuyNow}
-                                className="bg-[#6c63ff] w-[250px] text-white p-2 hover:bg-[#5a31f4] rounded transition-colors ml-[50px]">
+                                className="w-full sm:w-1/2 bg-[#6c63ff] text-white p-3 rounded hover:bg-[#5a31f4]"
+                            >
                                 Buy Now
                             </button>
 
-
                             <button
                                 onClick={handleAddToCart}
-                                className="bg-[#6c63ff] w-[250px]  text-white p-2 hover:bg-[#5a31f4] rounded transition-colors ml-[50px] ">Add to cart
+                                className="w-full sm:w-1/2 bg-[#6c63ff] text-white p-3 rounded hover:bg-[#5a31f4]"
+                            >
+                                Add to Cart
                             </button>
 
                         </div>
 
                     </div>
-                </div >
+
+                </div>
+
             </div>
 
             <Carouselfunc />
 
-        </section >
-    )
+        </section>
+    );
+
 }
 
 export default Cart;

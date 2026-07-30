@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
@@ -10,15 +10,16 @@ import Kids from "./Kids/Kids";
 import Beauty from "./Beauty/Beauty";
 import Footer from "./Footer/Footer";
 import Login from "./Authentications/Login";
-import Signup from "./Authentications/Signup";
+// import Signup from "./Authentications/Signup";
 import AuthHeader from "./Authentications/AuthHeader";
 import Cart from "./CartWishlist/Cart";
-import Api from "./Api/Api1";
+// import Api from "./Api/Api1";
 import Protect from "./Protect";
 import Cartpage from "./CartWishlist/Cartpage";
 import CartforApi from "./CartWishlist/CartforApi";
 import Categorylist from "./Categorypage/Categorylist";
 import Checkout from "./Checkoutpage/Checkout";
+import ScrollToTop from "/ScrollToTop";
 
 function Layout() {
   const location = useLocation();
@@ -30,6 +31,7 @@ function Layout() {
   return (
     <>
       {isAuthPage ? <AuthHeader /> : <Nav />}
+
 
       <Routes>
         <Route path="/" element={<Protect><Home /></Protect>} />
@@ -63,6 +65,7 @@ function Layout() {
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Layout />
     </BrowserRouter>
   );
