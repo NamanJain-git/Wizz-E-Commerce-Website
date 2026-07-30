@@ -37,12 +37,11 @@ const Checkout = () => {
             !formData.city.trim() ||
             !formData.state.trim() ||
             !formData.pincode.trim()
-        ) 
-        {
+        ) {
             alert("Please fill all the required fields.");
             return;
         }
-        if (cartItems.length > 0) {
+        if (checkoutItems.length > 0) {
             setShowCard(true);
         }
     };
