@@ -149,8 +149,8 @@ const Login = () => {
                             <label className="block text-sm font-medium text-gray-700">Confirm Password</label>
                             <input
                                 type="password"
-                                name="confirmpassword"
-                                value={formData.confirmpassword}
+                                name="confirmPassword"
+                                value={formData.confirmPassword}
                                 onChange={handleChange}
                                 className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                             />
@@ -166,7 +166,7 @@ const Login = () => {
 
                     <p className="text-center text-sm text-gray-600"> Don't have an account?{" "}
                         <a href="#" className="text-blue-600 hover:underline font-medium" onClick={toggle}>
-                            {login ? "Singup" : "Login"}
+                            {login ? "Signup" : "Login"}
                         </a>
                     </p>
 
