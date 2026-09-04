@@ -10,10 +10,8 @@ import Kids from "./Kids/Kids";
 import Beauty from "./Beauty/Beauty";
 import Footer from "./Footer/Footer";
 import Login from "./Authentications/Login";
-// import Signup from "./Authentications/Signup";
 import AuthHeader from "./Authentications/AuthHeader";
 import Cart from "./CartWishlist/Cart";
-// import Api from "./Api/Api1";
 import Protect from "./Protect";
 import Cartpage from "./CartWishlist/Cartpage";
 import CartforApi from "./CartWishlist/CartforApi";
@@ -24,9 +22,7 @@ import ScrollToTop from "/ScrollToTop";
 function Layout() {
   const location = useLocation();
 
-  const isAuthPage =
-    location.pathname === "/login" ||
-    location.pathname === "/signup";
+  const isAuthPage = location.pathname === "/login";
 
   return (
     <>
@@ -41,8 +37,6 @@ function Layout() {
         <Route path="/beauty" element={<Protect><Beauty /></Protect>} />
 
         <Route path="/login" element={<Login />} />
-        {/* Uncomment when you create Signup */}
-        {/* <Route path="/signup" element={<Signup />} /> */}
 
         <Route path="/cart" element={<Cart />} />
         <Route path="/cart/:id" element={<Cart />} />

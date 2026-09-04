@@ -20,7 +20,7 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const { username, phone, email, password, confirmpassword } = formData;
+        const { username, phone, email, password, confirmPassword } = formData;
 
         if (!email || !password) {
             return alert("Please fill all required fields");
@@ -32,7 +32,7 @@ const Login = () => {
                 return alert("Please fill all required fields");
             }
 
-            if (password !== confirmpassword) {
+            if (password !== confirmPassword) {
                 return alert("Password do not match");
             }
 
